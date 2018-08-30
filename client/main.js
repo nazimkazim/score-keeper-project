@@ -8,7 +8,15 @@ import App from './../imports/ui/App';
 
 Meteor.startup(() => {
   Tracker.autorun(() => {
-    let players = Players.find().fetch();
+    let players = Players.find(
+      {},
+      {
+        sort: {
+          score: -1,
+          name: 1
+        }
+      }
+    ).fetch();
     let title = 'Score keeper app';
 
     ReactDOM.render(
