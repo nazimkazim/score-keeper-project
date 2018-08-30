@@ -1,11 +1,16 @@
 import React from 'react';
 
 export default class TitleBar extends React.Component {
+  renderSubtitle() {
+    if (this.props.subtitle) {
+      return <h3>{this.props.subtitle}</h3>;
+    }
+  }
   render() {
     return (
       <div>
         <h1>{this.props.title}</h1>
-        <h3>{this.props.subtitle}</h3>
+        {this.renderSubtitle()}
       </div>
     );
   }
