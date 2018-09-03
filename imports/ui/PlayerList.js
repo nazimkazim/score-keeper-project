@@ -7,7 +7,7 @@ export default class PlayerList extends React.Component {
       // return jsx
       return (
         <div className="item">
-          <p>Nazim pls add your first player</p>
+          <p className="item__message">Nazim pls add your first player</p>
         </div>
       );
     } else {

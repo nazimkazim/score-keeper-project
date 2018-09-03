@@ -13,6 +13,7 @@ export default class Player extends React.Component {
         </p>
         <button
           type="button"
+          className="button button--round"
           onClick={() => {
             Players.update(this.props.player._id, { $inc: { score: 1 } });
           }}
@@ -21,6 +22,7 @@ export default class Player extends React.Component {
         </button>
         <button
           type="button"
+          className="button button--round"
           onClick={() => {
             Players.update(this.props.player._id, { $inc: { score: -1 } });
           }}
@@ -29,6 +31,7 @@ export default class Player extends React.Component {
         </button>
         <button
           type="button"
+          className="button button--round"
           onClick={() => {
             Players.remove(this.props.player._id);
           }}
