@@ -7,8 +7,8 @@ export default class Player extends React.Component {
   }
   render() {
     return (
-      <div>
-        <p key={this.props.player._id}>
+      <div className="item" key={this.props.player._id}>
+        <p>
           {this.props.player.name} has {this.props.player.score} score(s)
         </p>
         <button

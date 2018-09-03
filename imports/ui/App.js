@@ -8,8 +8,10 @@ export default class App extends React.Component {
     return (
       <div>
         <TitleBar title="Score App" />
-        <PlayerList players={this.props.players} />
-        <AddPlayer />
+        <div className="wrapper">
+          <PlayerList players={this.props.players} />
+          <AddPlayer />
+        </div>
       </div>
     );
   }
