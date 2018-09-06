@@ -6,12 +6,16 @@ export default class Player extends React.Component {
     Players.update(this.props.player._id, { $inc: { score: 1 } });
   }
   render() {
+    let itemCLassName = `item item--position-${this.props.player.rank}`;
     return (
-      <div className="item" key={this.props.player._id}>
+      <div className={itemCLassName} key={this.props.player._id}>
         <div className="player">
           <div>
             <h3 className="player__name">{this.props.player.name}</h3>
-            <p className="player__stats">{this.props.player.score} point(s)</p>
+            <p className="player__stats">
+              {this.props.player.position} place - {this.props.player.score}{' '}
+              point(s)
+            </p>
           </div>
           <div className="player__actions">
             <button
@@ -27,7 +31,9 @@ export default class Player extends React.Component {
               type="button"
               className="button button--round"
               onClick={() => {
-                Players.update(this.props.player._id, { $inc: { score: -1 } });
+                Players.update(this.props.player._id, {
+                  $inc: { score: -1 }
+                });
               }}
             >
               -

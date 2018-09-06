@@ -1,5 +1,6 @@
 import React from 'react';
 import Player from './Player';
+import FlipMove from 'react-flip-move';
 
 export default class PlayerList extends React.Component {
   renderPlayer() {
@@ -17,7 +18,14 @@ export default class PlayerList extends React.Component {
     }
   }
   render() {
-    return <div>{this.renderPlayer()}</div>;
+    return (
+      <FlipMove
+        easing="cubic-bezier(0, 0.7, 0.8, 0.1)"
+        maintainContainerHeight={true}
+      >
+        {this.renderPlayer()}
+      </FlipMove>
+    );
   }
 }
 

@@ -10,4 +10,19 @@
     font-weight: 300;
     text-align: center;
   }
+
+  &--position-1 {
+    background: $red;
+    border-color: $red-alt;
+  }
+
+  &--position-2 {
+    background: $blue;
+    border-color: $blue-alt;
+  }
+
+  &--position-3 {
+    background: $green;
+    border-color: $green-alt;
+  }
 }
